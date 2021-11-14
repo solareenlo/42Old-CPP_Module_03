@@ -6,11 +6,13 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 13:33:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:36:28 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:59:33 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+#include <string>
 
 ScavTrap::ScavTrap() : ClapTrap::ClapTrap("ScavTrap") {
     this->setHitPoints(ScavTrap::init_hit_points_);

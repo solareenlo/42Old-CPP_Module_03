@@ -6,11 +6,13 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 13:31:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:35:20 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:59:53 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 #ifndef SCAVTRAP_HPP_
 #define SCAVTRAP_HPP_
+
+#include <string>
 
 #include "ClapTrap.hpp"
 
