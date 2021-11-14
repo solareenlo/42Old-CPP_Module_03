@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 10:03:51 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:05:33 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:24:15 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -45,11 +45,14 @@ ClapTrap::ClapTrap(ClapTrap const& src) {
     this->setEnergyPoints(src.getEnergyPoints());
     this->setMaxEnergyPoints(src.getMaxEnergyPoints());
     this->setAttackDamage(src.getAttackDamage());
-    std::cout << this->name_ << " has been activated." << std::endl;
+    std::cout << "ClapTrap " << this->name_ << " has been activated."
+              << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
     if (this != &rhs) {
+        std::cout << "ClapTrap " << this->getName() << " has been replaced by "
+                  << "ClapTrap " << rhs.getName() << "." << std::endl;
         this->setName(rhs.getName());
         this->setHitPoints(rhs.getHitPoints());
         this->setMaxHitPoints(rhs.getMaxHitPoints());

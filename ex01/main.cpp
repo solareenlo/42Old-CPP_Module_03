@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 10:32:16 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:08:28 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:23:41 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ int main() {
     ClapTrap Z = ClapTrap("Z");
     ScavTrap A = ScavTrap("A");
     ScavTrap B = ScavTrap("B");
+    ScavTrap C = ScavTrap("C");
+    C = B;
 
     A.attack(B.getName());
-    A.attack("C");
+    A.attack(B.getName());
     A.takeDamage(1);
     A.beRepaired(10);
     A.takeDamage(2);

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 13:33:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:07:07 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:24:03 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ ScavTrap::ScavTrap(ScavTrap const& src) : ClapTrap(src.getName()) {
 
 ScavTrap& ScavTrap::operator=(ScavTrap const& rhs) {
     if (this != &rhs) {
+        std::cout << "ScavTrap " << this->getName() << " has been replaced by "
+                  << "ScavTrap " << rhs.getName() << "." << std::endl;
         this->setName(rhs.getName());
         this->setHitPoints(rhs.getHitPoints());
         this->setMaxHitPoints(rhs.getMaxHitPoints());
