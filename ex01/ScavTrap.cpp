@@ -6,28 +6,28 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 13:33:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:24:03 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:36:28 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap::ClapTrap("ScavTrap") {
-    this->setHitPoints(100);
-    this->setMaxHitPoints(100);
-    this->setEnergyPoints(50);
-    this->setMaxEnergyPoints(50);
-    this->setAttackDamage(20);
+    this->setHitPoints(ScavTrap::init_hit_points_);
+    this->setMaxHitPoints(ScavTrap::init_hit_points_);
+    this->setEnergyPoints(ScavTrap::init_energy_points_);
+    this->setMaxEnergyPoints(ScavTrap::init_energy_points_);
+    this->setAttackDamage(ScavTrap::init_attack_damage_);
     std::cout << "ScavTrap " << this->name_ << " has been activated."
               << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap::ClapTrap(name) {
-    this->setHitPoints(100);
-    this->setMaxHitPoints(100);
-    this->setEnergyPoints(50);
-    this->setMaxEnergyPoints(50);
-    this->setAttackDamage(20);
+    this->setHitPoints(ScavTrap::init_hit_points_);
+    this->setMaxHitPoints(ScavTrap::init_hit_points_);
+    this->setEnergyPoints(ScavTrap::init_energy_points_);
+    this->setMaxEnergyPoints(ScavTrap::init_energy_points_);
+    this->setAttackDamage(ScavTrap::init_attack_damage_);
     std::cout << "ScavTrap " << this->name_ << " has been activated."
               << std::endl;
 }
