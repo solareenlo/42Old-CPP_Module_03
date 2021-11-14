@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 13:33:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 17:43:38 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:11:07 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <string>
 
 ScavTrap::ScavTrap() : ClapTrap::ClapTrap("ScavTrap") {
+    this->setName("ScavTrap");
     this->setHitPoints(ScavTrap::init_hit_points_);
     this->setMaxHitPoints(ScavTrap::init_hit_points_);
     this->setEnergyPoints(ScavTrap::init_energy_points_);
@@ -25,6 +26,7 @@ ScavTrap::ScavTrap() : ClapTrap::ClapTrap("ScavTrap") {
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap::ClapTrap(name) {
+    this->setName(name);
     this->setHitPoints(ScavTrap::init_hit_points_);
     this->setMaxHitPoints(ScavTrap::init_hit_points_);
     this->setEnergyPoints(ScavTrap::init_energy_points_);
@@ -39,6 +41,7 @@ ScavTrap::~ScavTrap() {
 }
 
 ScavTrap::ScavTrap(ScavTrap const& src) : ClapTrap(src.getName()) {
+    this->setName(src.getName());
     this->setHitPoints(src.getHitPoints());
     this->setMaxHitPoints(src.getMaxHitPoints());
     this->setEnergyPoints(src.getEnergyPoints());
