@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 10:03:51 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 13:26:47 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 14:18:02 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ ClapTrap::ClapTrap()
       hit_points_(ClapTrap::init_hit_points_),
       energy_points_(ClapTrap::init_energy_points_),
       attack_damage_(ClapTrap::init_attack_damage_) {
-    std::cout << "ClapTrap " << name_ << " has been activated." << std::endl;
+    std::cout << "ClapTrap " << this->name_ << " has been activated."
+              << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -25,14 +26,32 @@ ClapTrap::ClapTrap(std::string name)
       hit_points_(ClapTrap::init_hit_points_),
       energy_points_(ClapTrap::init_energy_points_),
       attack_damage_(ClapTrap::init_attack_damage_) {
-    std::cout << "ClapTrap " << name_ << " has been activated." << std::endl;
+    std::cout << "ClapTrap " << this->name_ << " has been activated."
+              << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap " << this->name_ << " disappeared." << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const& src) { this->name_ = src.name_; }
+ClapTrap::ClapTrap(ClapTrap const& src) {
+    this->setName(src.getName());
+    this->setHitPoints(src.getHitPoints());
+    this->setEnergyPoints(src.getEnergyPoints());
+    this->setAttackDamage(src.getAttackDamage());
+    std::cout << "ClapTrap " << this->name_ << " has been activated."
+              << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
+    if (this != &rhs) {
+        this->setName(rhs.getName());
+        this->setHitPoints(rhs.getHitPoints());
+        this->setEnergyPoints(rhs.getEnergyPoints());
+        this->setAttackDamage(rhs.getAttackDamage());
+    }
+    return (*this);
+}
 
 void ClapTrap::attack(std::string const& target) {
     std::cout << "ClapTrap " << this->name_ << " attack " << target
@@ -77,7 +96,7 @@ void ClapTrap::setHitPoints(unsigned int hit_points) {
     this->hit_points_ = hit_points;
 }
 
-void ClapTrap::setEvergyPoints(unsigned int energy_points) {
+void ClapTrap::setEnergyPoints(unsigned int energy_points) {
     this->energy_points_ = energy_points;
 }
 
