@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 09:52:37 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:21:41 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 17:27:04 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 #ifndef CLAPTRAP_HPP_
@@ -19,7 +19,7 @@ class ClapTrap {
  public:
     ClapTrap();
     ClapTrap(std::string name);
-    ~ClapTrap();
+    virtual ~ClapTrap();
     ClapTrap(ClapTrap const& src);
 
     ClapTrap& operator=(ClapTrap const& rhs);
