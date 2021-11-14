@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 10:03:51 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 12:57:05 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 13:26:47 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -71,3 +71,16 @@ std::string ClapTrap::getName() const { return this->name_; }
 unsigned int ClapTrap::getHitPoints() const { return this->hit_points_; }
 unsigned int ClapTrap::getEnergyPoints() const { return this->energy_points_; }
 unsigned int ClapTrap::getAttackDamage() const { return this->attack_damage_; }
+
+void ClapTrap::setName(std::string name) { this->name_ = name; }
+void ClapTrap::setHitPoints(unsigned int hit_points) {
+    this->hit_points_ = hit_points;
+}
+
+void ClapTrap::setEvergyPoints(unsigned int energy_points) {
+    this->energy_points_ = energy_points;
+}
+
+void ClapTrap::setAttackDamage(unsigned int attack_damage) {
+    this->attack_damage_ = attack_damage;
+}
