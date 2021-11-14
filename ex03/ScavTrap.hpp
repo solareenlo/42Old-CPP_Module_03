@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 13:31:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 18:51:22 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/15 00:15:24 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 #ifndef SCAVTRAP_HPP_
@@ -22,9 +22,9 @@ class ScavTrap : public virtual ClapTrap {
     ScavTrap(std::string name);
     ~ScavTrap();
     ScavTrap(ScavTrap const& src);
-
     ScavTrap& operator=(ScavTrap const& rhs);
 
+    void attack(std::string const& target);
     void guardGate();
 
  protected:

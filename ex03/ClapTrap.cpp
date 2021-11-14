@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 10:03:51 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 16:58:12 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 23:41:57 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -64,8 +64,9 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
 }
 
 void ClapTrap::attack(std::string const& target) {
-    std::cout << this->name_ << " attack " << target << ", causing "
-              << this->attack_damage_ << " points of damage!" << std::endl;
+    std::cout << "ClapTrap " << this->name_ << " attack " << target
+              << ", causing " << this->attack_damage_ << " points of damage!"
+              << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {

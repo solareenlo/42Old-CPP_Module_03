@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 09:52:37 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 18:55:31 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/15 00:23:29 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 #ifndef CLAPTRAP_HPP_
@@ -46,7 +46,7 @@ class ClapTrap {
 
     unsigned int getMaxHitPoints() const;
     unsigned int getMaxEnergyPoints() const;
-    void setName(std::string name);
+    virtual void setName(std::string name);
     void setHitPoints(unsigned int hit_points);
     void setMaxHitPoints(unsigned int max_hit_points);
     void setEnergyPoints(unsigned int energy_points);

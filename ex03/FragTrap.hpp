@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:28:42 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 18:51:17 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/15 00:14:53 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 #ifndef FRAGTRAP_HPP_

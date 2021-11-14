@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 13:33:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/14 18:01:54 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/14 23:42:39 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -64,6 +64,12 @@ ScavTrap& ScavTrap::operator=(ScavTrap const& rhs) {
         this->setAttackDamage(rhs.getAttackDamage());
     }
     return (*this);
+}
+
+void ScavTrap::attack(std::string const& target) {
+    std::cout << "ScavTrap " << this->name_ << " attack " << target
+              << ", causing " << this->attack_damage_ << " points of damage!"
+              << std::endl;
 }
 
 void ScavTrap::guardGate() {
